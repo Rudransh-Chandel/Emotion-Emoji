@@ -39,7 +39,7 @@ function speak()
 
 function check()
 {
-    img = document.getElementById("imgcaptured");
+    img = document.getElementById("imagecaptured");
     classifier.classify(img, gotResult);
 }
 
@@ -50,7 +50,7 @@ if (error)
 } else {
     console.log(results);
     document.getElementById("emotionName").innerHTML = results[0].label;
-    document.getElementById("emotionNaeme2").innerHTML = results[1].label;
+    document.getElementById("emotionName2").innerHTML = results[1].label;
     prediction1 = results[0].label;
     prediction2 = results[1].label;
     speak();
